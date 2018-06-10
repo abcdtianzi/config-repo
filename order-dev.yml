@@ -17,3 +17,4 @@ eureka:
       hostname: 127.0.0.1  #设置跳转host名
 server:
   port: 8081
+env: dev
