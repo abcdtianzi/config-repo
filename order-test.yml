@@ -9,7 +9,11 @@ spring:
     password: mmall
   jpa:
     show-sql: true
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 server:
   port: 8081
 env: test
