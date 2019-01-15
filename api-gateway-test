@@ -1,0 +1,13 @@
+zuul:
+  sensitive-headers:    #全部服务忽略敏感头，即可以传cookie
+  routes:
+  #/myproduct/product/list  -> /product/product/list
+    myproduct:
+      path: /myProduct/**     #自定义名字
+      serviceId: product
+      sensitiveHeaders:     #敏感头设置为空可以传cookie，默认不传cookie
+  #简洁写法：
+    product: /myProduct/**
+
+  ignored-patterns: #禁止访问接口，列表形式
+    - /**/product/listForOrder
